@@ -26,12 +26,11 @@ jobs:
               '${{ github.event.client_payload.linux_arm64_sha256 }}',
               '${{ github.event.client_payload.linux_x86_64_sha256 }}',
           ]
-          i = 0
+          i = [0]
           def replacer(m):
-              nonlocal i
-              if i < len(shas):
-                  r = f'sha256 \"{shas[i]}\"'
-                  i += 1
+              if i[0] < len(shas):
+                  r = f'sha256 \"{shas[i[0]]}\"'
+                  i[0] += 1
                   return r
               return m.group(0)
           content = re.sub(r'sha256 \"[^\"]+\"', replacer, content)
