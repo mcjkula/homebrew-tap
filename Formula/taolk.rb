@@ -2,25 +2,25 @@ class Taolk < Formula
   desc "End-to-end encrypted messaging for Bittensor"
   homepage "https://github.com/mcjkula/taolk"
   license "MIT"
-  version "2.0.1"
+  version "2.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/mcjkula/taolk/releases/download/v#{version}/taolk-macos-aarch64"
-      sha256 "e9dcfee6f4c489e1c81942be8451704bd61aff4a82e7f997ba5cbacd4b93d6da"
+      sha256 "d94a6741fb3d54ddce3fda9b2ad08e297281ab3f29d037c0a456976ef3827109"
     else
       url "https://github.com/mcjkula/taolk/releases/download/v#{version}/taolk-macos-x86_64"
-      sha256 "1f95fe4008e1aa55ddc6bf80e64f61200d25d92466ede95f6b6766cc9887a685"
+      sha256 "8e9abd842d5621ae74e56383eb31e3ed43df4e1cfc35b6535fd34b1c5c978a3e"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/mcjkula/taolk/releases/download/v#{version}/taolk-linux-aarch64"
-      sha256 "1beb9f56a77662bc5c3dba6d98995f4cf7deaa0735c6cdb439b7ec83ef3bc770"
+      sha256 "b0a730850e46871837e4a1a67a4ad9d6dd8504aa0cc2f750e3bf325c6a73dfaf"
     else
       url "https://github.com/mcjkula/taolk/releases/download/v#{version}/taolk-linux-x86_64"
-      sha256 "e51e8604007e3c31d1ae288a8297d5fc32f79219da4de549798cd43f50fc8ba6"
+      sha256 "21aa59191d80e41b14246f5d111455aadea57a89eb3ae2a5ac8fbec953b7d164"
     end
   end
 
